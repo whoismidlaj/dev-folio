@@ -1,6 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import { ref } from 'vue';
 
 const isMenuOpen = ref(false);
 
@@ -8,24 +7,6 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-  
-  const data = ref({});
-  const isLoading = ref(true);
-  
-  const fetchData = () => {
-    axios
-      .get('/data.json')
-      .then(response => {
-        data.value = response.data;
-        isLoading.value = false;
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-        isLoading.value = false;
-      });
-  };
-  
-  onMounted(fetchData);
 </script>
 
 <template>
@@ -34,24 +15,23 @@ const toggleMenu = () => {
       <div class="flex justify-between max-w-screen-xl mx-auto px-5 py-5">
         <div class="flex items-center gap-3 md:gap-5 z-50">
           <!-- <img class="w-14" src="../assets/logo.png" /> -->
-          <a href="/" class="text-xl md:text-3xl font-black">Alfin K Mathew</a>
+          <a href="/" class="text-xl md:text-3xl font-black">DevFolio</a>
         </div>
         <div class="hidden md:flex items-center gap-10 font-semibold text-xl">
           <!-- <router-link !to="/about">About.</router-link> -->
           <RouterLink
-            :class="{ 'text-yellow-100': $route.path === '/about' }"
+            :class="{ 'opacity-75': $route.path === '/about' }"
             to="/about"
             >About.</RouterLink
           >
           <RouterLink
-            :class="{ 'text-yellow-100': $route.path === '/works' }"
+            :class="{ 'opacity-75': $route.path === '/works' }"
             to="/works"
             >Works.</RouterLink
           >
-          <a v-if="isLoading">Blog.</a>
-          <a v-else  :href="data.blog">Blog.</a>
+          <a href="#">Blog.</a>
           <RouterLink
-            :class="{ 'text-yellow-100': $route.path === '/contact' }"
+            :class="{ 'opacity-75': $route.path === '/contact' }"
             to="/contact"
             >Contact.</RouterLink
           >
@@ -74,7 +54,7 @@ const toggleMenu = () => {
           <div class="flex items-center gap-3 md:gap-5 z-50">
             <!-- <img class="w-14" src="../assets/logo.png" /> -->
             <a href="/" class="text-xl md:text-3xl font-black"
-              >Alfin K Mathew</a
+              >DevFolio</a
             >
           </div>
           <button

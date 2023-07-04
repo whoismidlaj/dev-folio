@@ -35,11 +35,11 @@
                 >
                 {{ word }}
             </span> -->
-            <span class="text-lg uppercase font-medium px-10">UI / UX</span>
+            <span class="text-lg uppercase font-medium px-10">Lorem Ipsum</span>
             <i class="fa-solid fa-star-of-life"></i>
-            <span class="text-lg uppercase font-medium px-14">Branding and Visual Designs</span>
+            <span class="text-lg uppercase font-medium px-14">Lorem Ipsum</span>
             <i class="fa-solid fa-star-of-life"></i>
-            <span class="text-lg uppercase font-medium px-14">Web design</span>
+            <span class="text-lg uppercase font-medium px-14">Lorem Ipsum</span>
             <i class="fa-solid fa-star-of-life"></i>
         </Vue3Marquee>
     </div>

@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary": "#FBE62F",
-        "black": "#010101",
+        "primary": "#101820FF",
+        "black": "#F2AA4CFF",
       },
       fontFamily: {
           "sans": ['Bai Jamjuree', 'sans-serif']
